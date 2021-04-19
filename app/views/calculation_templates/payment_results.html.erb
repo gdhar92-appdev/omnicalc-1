@@ -1,0 +1,18 @@
+<h1>Payment Results</h1>
+
+<dl>
+  <dt>APR</dt>
+  <dd><%= number_with_precision(@apr, :precision => 4) %>%</dd>
+
+  <dt>Number of years</dt>
+  <dd><%= @years.round(0) %></dd>
+  
+  <dt>Principal</dt>
+  <dd>$<%= number_with_precision(@pv, :precision => 2, :delimiter => ',') %></dd>
+
+  <dt>Payment</dt>
+  <dd>$<%= number_with_precision(@pmt, :precision => 2, :delimiter => ',') %></dd>
+
+</dl>
+
+<a href="/payment/new">Calculate another payment<a>
